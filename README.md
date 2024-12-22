@@ -76,3 +76,9 @@
         modified:   README.md
         new file:   templates/base.html
         modified:   templates/blog/index.html
+
+#### 9. Dynamic page title with block super
+
+        modified:   README.md
+        modified:   templates/base.html
+        modified:   templates/blog/index.html
