@@ -189,3 +189,8 @@
         new file:   apps/blog/migrations/0001_initial.py
         modified:   apps/blog/models.py
         modified:   config/settings.py
+
+#### 2. CREATE blog post - part 2: Create BlogPostModelForm model forms
+
+        modified:   README.md
+        new file:   apps/blog/forms.py
