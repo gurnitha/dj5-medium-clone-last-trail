@@ -182,4 +182,10 @@
 
 ## 3. BLOG POSTS MANAGEMENT
 
+#### 1. CREATE blog post - part 1: Create models: Abstract, Category, Tag, and BlogPost
 
+        modified:   README.md
+        modified:   apps/blog/admin.py
+        new file:   apps/blog/migrations/0001_initial.py
+        modified:   apps/blog/models.py
+        modified:   config/settings.py
