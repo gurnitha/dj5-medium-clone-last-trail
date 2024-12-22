@@ -1,7 +1,7 @@
 # apps/blog/views.py
 
 # Django modules
-from django.shortcuts import render, redirect
+from django.shortcuts import render, redirect, get_object_or_404
 from django.contrib import messages
 
 # Third party
@@ -63,3 +63,9 @@ def create_blog_post_view(request):
 
     return render(request, 'blog/create_blog_post.html', context)
 # ///////////////////////// create_blog_post_view /////////////////////////
+
+
+# ///////////////////////// posts_by_user_view /////////////////////////
+def posts_by_user_view(request, user_slug):
+    return render(request, 'blog/posts_by_user.html', context)
+# ///////////////////////// posts_by_user /////////////////////////

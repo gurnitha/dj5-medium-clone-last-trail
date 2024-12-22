@@ -281,3 +281,10 @@
         modified:   apps/blog/models.py
         modified:   apps/blog/views.py
         modified:   templates/blog/components/posts_latest.html
+
+#### 10. READ blog posts by user- part 1: Define views, urls, templates
+
+        modified:   README.md
+        modified:   apps/blog/urls.py
+        modified:   apps/blog/views.py
+        new file:   templates/blog/posts_by_user.html
