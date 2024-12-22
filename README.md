@@ -22,3 +22,12 @@
         new file:   apps/blog/models.py
         new file:   apps/blog/tests.py
         new file:   apps/blog/views.py
+
+#### 3. Register the blog app to the project
+
+        modified:   README.md
+        modified:   config/settings.py        
+
+        # Note: error
+
+        ModuleNotFoundError: No module named 'blog'
