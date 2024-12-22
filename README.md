@@ -209,3 +209,9 @@
         modified:   README.md
         modified:   apps/blog/views.py
         modified:   templates/blog/create_blog_post.html
+
+#### 5. CREATE blog post - part 5: Adding class attributes to BlogPostModelForm
+
+        modified:   README.md
+        modified:   apps/blog/forms.py
+        modified:   templates/blog/create_blog_post.html
