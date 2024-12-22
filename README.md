@@ -47,3 +47,17 @@
         modified:   config/settings.py
         modified:   config/urls.py
         new file:   templates/blog/index.html
+
+#### 6. Add html template, add path and load static files
+
+        modified:   config/settings.py
+        new file:   static/css/bootstrap.min.css
+        new file:   static/css/bootstrap.min.css.map
+        new file:   static/css/style.css
+        new file:   static/css/tagify.css
+        new file:   static/js/bootstrap.bundle.min.js
+        new file:   static/js/bootstrap.bundle.min.js.map
+        new file:   static/js/tagify.js
+        new file:   static/js/tagify.polyfills.min.js
+        new file:   static/js/tinymce.min.js
+        modified:   templates/blog/index.html
