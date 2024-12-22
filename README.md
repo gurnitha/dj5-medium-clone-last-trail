@@ -144,3 +144,10 @@
         modified:   templates/inc/navbar.html
 
         :)
+
+#### 7. Register - part 1: Create Profile model
+
+        modified:   README.md
+        modified:   apps/account/admin.py
+        new file:   apps/account/migrations/0001_initial.py
+        modified:   apps/account/models.py
