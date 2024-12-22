@@ -10,6 +10,7 @@ import json
 # My modules
 from blog.forms import BlogPostModelForm
 from blog.models import Tag, BlogPost, Category 
+from account.models import Profile
 
 # Create your views here.
 
@@ -67,5 +68,11 @@ def create_blog_post_view(request):
 
 # ///////////////////////// posts_by_user_view /////////////////////////
 def posts_by_user_view(request, user_slug):
+    profile         = get_object_or_404(Profile, slug=user_slug)
+    posts_by_user   = BlogPost.objects.filter(user=profile.user, is_active=True)
+    context = dict(
+        profile=profile,
+        posts_by_user=posts_by_user,
+    )
     return render(request, 'blog/posts_by_user.html', context)
 # ///////////////////////// posts_by_user /////////////////////////

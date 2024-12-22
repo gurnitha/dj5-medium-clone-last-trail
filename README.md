@@ -282,9 +282,25 @@
         modified:   apps/blog/views.py
         modified:   templates/blog/components/posts_latest.html
 
-#### 10. READ blog posts by user- part 1: Define views, urls, templates
+#### 10. READ blog posts by user- part 3: Define views, urls, templates
 
         modified:   README.md
         modified:   apps/blog/urls.py
         modified:   apps/blog/views.py
         new file:   templates/blog/posts_by_user.html
+
+#### 11. READ blog posts by user- part 4: Show all posts by a user
+
+        modified:   README.md
+        modified:   apps/account/models.py
+        modified:   apps/blog/views.py
+        new file:   media/avatar/darling2.PNG
+        new file:   media/avatar/ing.jpeg
+        modified:   templates/blog/components/posts_latest.html
+        modified:   templates/blog/posts_by_user.html
+
+        Note:
+
+        1. It works: show all posts by a user.
+
+        :)
