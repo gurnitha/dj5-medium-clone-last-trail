@@ -76,3 +76,14 @@ def posts_by_user_view(request, user_slug):
     )
     return render(request, 'blog/posts_by_user.html', context)
 # ///////////////////////// posts_by_user /////////////////////////
+
+
+# ///////////////////////// post_detail_view /////////////////////////
+def post_detail_view(request, user_slug, post_slug):
+    post = get_object_or_404(BlogPost, slug=post_slug, is_active=True)
+    context = dict(
+        post=post,
+    )
+    return render(request, 'blog/post_detail.html', context)
+# ///////////////////////// post_detail_view /////////////////////////
+

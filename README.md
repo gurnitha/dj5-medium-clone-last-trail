@@ -304,3 +304,19 @@
         1. It works: show all posts by a user.
 
         :)
+
+#### 12. READ detail blog posts - part 5: Show post detail 
+
+        modified:   apps/blog/models.py
+        modified:   apps/blog/urls.py
+        modified:   apps/blog/views.py
+        modified:   config/settings.py
+        new file:   media/post/banner02.jpg.1000x300_q85_crop.jpg
+        new file:   media/post/banner03.jpg
+        new file:   media/post/banner03.jpg.1000x300_q85_crop.jpg
+        new file:   media/post/banner03.jpg.400x300_q85_crop.jpg
+        new file:   media/post/car_pBDHz1u.PNG.1000x300_q85_crop.png
+        modified:   templates/blog/components/posts_latest.html
+        new file:   templates/blog/post_detail.html
+
+        :)

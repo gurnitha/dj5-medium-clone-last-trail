@@ -70,3 +70,12 @@ class BlogPost(CommonModel):
     #             "post_slug": self.slug,
     #         }
     #     )
+    
+    def get_absolute_url(self):
+        return reverse(
+            'blog:post_detail_view',
+            kwargs={
+                "user_slug": self.user.profile.slug,
+                "post_slug": self.slug,
+            }
+        )
