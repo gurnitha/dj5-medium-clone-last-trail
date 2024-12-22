@@ -9,3 +9,9 @@ from django.shortcuts import render
 def home_view(request):
     return render(request, 'blog/index.html')
 # ///////////////////////// home_view /////////////////////////
+
+
+# ///////////////////////// create_blog_post_view /////////////////////////
+def create_blog_post_view(request):
+    return render(request, 'blog/create_blog_post.html')
+# ///////////////////////// create_blog_post_view /////////////////////////

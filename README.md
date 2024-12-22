@@ -194,3 +194,12 @@
 
         modified:   README.md
         new file:   apps/blog/forms.py
+
+#### 3. CREATE blog post - part 3: Create views, urls, templates
+
+        modified:   README.md
+        modified:   apps/blog/urls.py
+        modified:   apps/blog/views.py
+        deleted:    templates/blog/account/login.html
+        new file:   templates/blog/create_blog_post.html
+        modified:   templates/inc/navbar.html
