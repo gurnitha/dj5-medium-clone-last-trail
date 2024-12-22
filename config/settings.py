@@ -44,6 +44,8 @@ INSTALLED_APPS = [
 
     # Third party apps
     'tinymce',
+    'crispy_forms',
+    'crispy_bootstrap5',
 
     # My apps
     'account',
@@ -142,4 +144,8 @@ STATICFILES_DIRS = [BASE_DIR / "static",]
 # Media files
 MEDIA_URL = 'media/'
 MEDIA_ROOT = BASE_DIR / 'media'
+
+# Bootstrap 5 rispy:
+CRISPY_ALLOWED_TEMPLATE_PACKS = "bootstrap5"
+CRISPY_TEMPLATE_PACK = "bootstrap5"
 # ========================== Added new scripts ==========================

@@ -215,3 +215,9 @@
         modified:   README.md
         modified:   apps/blog/forms.py
         modified:   templates/blog/create_blog_post.html
+
+#### 6. CREATE blog post - part 6: Styling the form using crispy bootstrap5
+ 
+        modified:   apps/blog/forms.py
+        modified:   config/settings.py
+        modified:   templates/blog/create_blog_post.html

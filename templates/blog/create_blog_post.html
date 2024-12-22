@@ -2,6 +2,7 @@
 
 {% extends 'base.html' %}
 {% block title %} {{ block.super}} Create blog post {% endblock title %}
+{% load crispy_forms_tags %}
 
 {% block content %}
 
@@ -11,7 +12,10 @@
             <h2>Create blog post:</h2>
             <form method="post">
                 {% csrf_token %}
-                {{ form.as_p }}
+                {{ form|crispy }}
+
+                <button type="submit" class="btn btn-primary">Create</button>
+                <a href="{% url 'blog:home_view' %}" class="btn btn-secondary">Cancel</a>
             </form>
         </div>
     </div>
