@@ -9,15 +9,21 @@ import json
 
 # My modules
 from blog.forms import BlogPostModelForm
-from blog.models import Tag, BlogPost 
+from blog.models import Tag, BlogPost, Category 
 
 # Create your views here.
 
+
 # ///////////////////////// home_view /////////////////////////
 def home_view(request):
-    posts_latest = BlogPost.objects.filter(is_active=True).order_by('-created_at')
+    # posts_latest = BlogPost.objects.filter(is_active=True).order_by('-created_at')
+    posts_latest = BlogPost.objects.filter(is_active=True) #.order_by('-created_at')
+    tags = Tag.objects.filter(is_active=True)
+    categories = Category.objects.filter(is_active=True)
     context = dict(
-        posts_latest=posts_latest
+        posts_latest=posts_latest,
+        categories=categories,
+        tags=tags,
     )
     return render(request, 'blog/index.html', context)
 # ///////////////////////// home_view /////////////////////////

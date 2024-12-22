@@ -274,3 +274,10 @@
         2. User image (how to show it)?
 
         :)?
+
+#### 9. READ blog post - part 2: Read and show all categories and tags to index page
+
+        modified:   README.md
+        modified:   apps/blog/models.py
+        modified:   apps/blog/views.py
+        modified:   templates/blog/components/posts_latest.html

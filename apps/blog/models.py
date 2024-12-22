@@ -19,6 +19,7 @@ class CommonModel(models.Model):
 
     class Meta:
         abstract = True
+        ordering = ('title',)
 
 
 class Category(CommonModel):
@@ -57,6 +58,9 @@ class BlogPost(CommonModel):
 
     def __str__(self):
         return self.title
+
+    class Meta:
+        ordering = ('-created_at',)
 
     # def get_absolute_url(self):
     #     return reverse(
