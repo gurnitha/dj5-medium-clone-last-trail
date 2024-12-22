@@ -70,3 +70,9 @@
         new file:   templates/blog/components/posts_trend.html
         modified:   templates/blog/index.html
         new file:   templates/inc/navbar.html
+
+#### 8. Base template
+
+        modified:   README.md
+        new file:   templates/base.html
+        modified:   templates/blog/index.html
