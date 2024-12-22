@@ -82,3 +82,5 @@
         modified:   README.md
         modified:   templates/base.html
         modified:   templates/blog/index.html
+
+## 2. USER MANAGEMENT
