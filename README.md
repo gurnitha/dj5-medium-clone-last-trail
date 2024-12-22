@@ -61,3 +61,12 @@
         new file:   static/js/tagify.polyfills.min.js
         new file:   static/js/tinymce.min.js
         modified:   templates/blog/index.html
+
+#### 7. Template inheritance
+
+        modified:   README.md
+        new file:   templates/blog/components/hero.html
+        new file:   templates/blog/components/posts_latest.html
+        new file:   templates/blog/components/posts_trend.html
+        modified:   templates/blog/index.html
+        new file:   templates/inc/navbar.html
