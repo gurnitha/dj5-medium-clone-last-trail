@@ -11,3 +11,14 @@
         new file:   config/urls.py
         new file:   config/wsgi.py
         new file:   manage.py
+
+#### 2. Create blog app
+
+        modified:   README.md
+        new file:   apps/blog/__init__.py
+        new file:   apps/blog/admin.py
+        new file:   apps/blog/apps.py
+        new file:   apps/blog/migrations/__init__.py
+        new file:   apps/blog/models.py
+        new file:   apps/blog/tests.py
+        new file:   apps/blog/views.py
