@@ -38,3 +38,12 @@
         modified:   config/settings.py
 
         :)
+
+#### 5. Hello World!
+
+        modified:   README.md
+        new file:   apps/blog/urls.py
+        modified:   apps/blog/views.py
+        modified:   config/settings.py
+        modified:   config/urls.py
+        new file:   templates/blog/index.html
