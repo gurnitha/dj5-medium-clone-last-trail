@@ -1,0 +1,81 @@
+<!-- templates/account/register.html -->
+
+{% extends 'base.html' %}
+{% block title %} {{ block.super}} Register {% endblock title %}
+{% load static %}
+
+{% block content %}
+
+<div class="container mt-5">
+    <div class="row">
+        <div class="col-sm-6 offset-sm-3">
+            <h1>Register:</h1>
+            <br>
+            <form method="post">
+            	{% csrf_token %}
+                <div class="mb-3">
+                    <label for="first_name" class="form-label">First name</label>
+                    <input 
+                    	type="text" 
+                    	name="first_name"
+                    	class="form-control" 
+                    	id="first_name" >
+                </div>
+
+                <div class="mb-3">
+                    <label for="last_name" class="form-label">Last name</label>
+                    <input 
+                    	type="text" 
+                    	name="last_name"
+                    	class="form-control" 
+                    	id="last_name" >
+                </div>
+
+                <div class="mb-3">
+                    <label for="email" class="form-label">Email</label>
+                    <input 
+                    	type="email" 
+                    	name="email"
+                    	class="form-control" 
+                    	id="email" 
+                    	aria-describedby="emailHelp" >
+                </div>
+                <div class="mb-3">
+                    <label for="email_confirm" class="form-label">Confirm email</label>
+                    <input 
+                    	type="email" 
+                    	name="email_confirm"
+                    	class="form-control" 
+                    	id="email_confirm" 
+                    	aria-describedby="emailHelp" >
+                </div>
+                <div class="mb-3">
+                    <label for="password" class="form-label">Password</label>
+                    <input 
+                    	type="password" 
+                    	name="password"
+                    	class="form-control" 
+                    	id="password" >
+                </div>
+                <div class="mb-3">
+                    <label for="password_confirm" class="form-label">Confirm password</label>
+                    <input 
+                    	type="password" 
+                    	name="password_confirm"
+                    	class="form-control" 
+                    	id="password_confirm" >
+                </div>
+
+                <div class="mb-3">
+                    <label for="instagram" class="form-label">Instagram account</label>
+                    <input type="text" class="form-control" id="instagram" name="instagram">
+                </div>
+                <button type="submit" class="btn btn-primary">Register</button>
+                <a href="{% url 'blog:home_view' %}" class="btn btn-secondary">Cancel</a>
+                <a href="{% url 'account:login_view' %}" class="btn btn-info">Login</a>
+            </form>
+        </div>
+    </div>
+</div>
+
+{% endblock content %}

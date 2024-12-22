@@ -151,3 +151,11 @@
         modified:   apps/account/admin.py
         new file:   apps/account/migrations/0001_initial.py
         modified:   apps/account/models.py
+
+#### 8. Register - part 2: Create views, ulrs, templates, and links
+
+        modified:   README.md
+        modified:   apps/account/urls.py
+        modified:   apps/account/views.py
+        new file:   templates/account/register.html
+        modified:   templates/inc/navbar.html

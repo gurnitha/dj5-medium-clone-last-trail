@@ -49,3 +49,9 @@ def logout_view(request):
     logout(request)
     return redirect('blog:home_view')
 # ///////////////////////// logout_view /////////////////////////
+
+
+# ///////////////////////// register_view /////////////////////////
+def register_view(request):
+    return render(request, 'account/register.html')
+# ///////////////////////// register_view /////////////////////////
