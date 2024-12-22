@@ -203,3 +203,9 @@
         deleted:    templates/blog/account/login.html
         new file:   templates/blog/create_blog_post.html
         modified:   templates/inc/navbar.html
+
+#### 4. CREATE blog post - part 4: Fetch BlogPostModelForm instances to template from create_blog_post_view 
+
+        modified:   README.md
+        modified:   apps/blog/views.py
+        modified:   templates/blog/create_blog_post.html
