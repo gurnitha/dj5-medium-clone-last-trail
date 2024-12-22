@@ -256,3 +256,21 @@
         5. If changed image, old image does not remove.
 
         :)?
+
+#### 8. READ blog post - part 1: Read and show all posts to index page
+
+        modified:   README.md
+        modified:   apps/blog/views.py
+        modified:   config/settings.py
+        new file:   media/post/banner01.jpg
+        new file:   media/post/banner02.jpg
+        new file:   media/post/banner02.jpg.400x300_q85_crop.jpg
+        new file:   media/post/car_pBDHz1u.PNG.400x300_q85_crop.png
+        modified:   templates/blog/components/posts_latest.html
+
+        Note:
+
+        1. Thumbnail not show up.
+        2. User image (how to show it)?
+
+        :)?

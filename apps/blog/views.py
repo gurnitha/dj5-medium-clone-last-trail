@@ -9,13 +9,17 @@ import json
 
 # My modules
 from blog.forms import BlogPostModelForm
-from blog.models import Tag 
+from blog.models import Tag, BlogPost 
 
 # Create your views here.
 
 # ///////////////////////// home_view /////////////////////////
 def home_view(request):
-    return render(request, 'blog/index.html')
+    posts_latest = BlogPost.objects.filter(is_active=True).order_by('-created_at')
+    context = dict(
+        posts_latest=posts_latest
+    )
+    return render(request, 'blog/index.html', context)
 # ///////////////////////// home_view /////////////////////////
 
 
