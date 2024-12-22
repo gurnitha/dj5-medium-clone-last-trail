@@ -120,3 +120,9 @@
         But no message to inform the user.
 
         :)?
+
+#### 4. Login - part 3: Add django messages
+
+        modified:   README.md
+        modified:   templates/base.html
+        new file:   templates/inc/messages.html
