@@ -31,3 +31,10 @@
         # Note: error
 
         ModuleNotFoundError: No module named 'blog'
+
+#### 4. Create path for the apps
+
+        modified:   README.md
+        modified:   config/settings.py
+
+        :)
