@@ -46,6 +46,7 @@ INSTALLED_APPS = [
     'tinymce',
     'crispy_forms',
     'crispy_bootstrap5',
+    'django_extensions',
 
     # My apps
     'account',

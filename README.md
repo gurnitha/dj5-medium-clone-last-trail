@@ -231,3 +231,28 @@
 
         1. TinyMCE does not work in Edge browser.
         1. It works in Chome and Mozzilla
+
+#### 7. CREATE blog post - part 7: Add logic to create_blog_post_view
+
+        modified:   README.md
+        modified:   apps/account/migrations/0001_initial.py
+        modified:   apps/blog/migrations/0001_initial.py
+        modified:   apps/blog/views.py
+        modified:   config/settings.py
+        new file:   media/post/car.PNG
+        new file:   media/post/car_2E77E2U.PNG
+        new file:   media/post/car_IICQLZ1.PNG
+        new file:   media/post/car_ORDHHsG.PNG
+        new file:   media/post/car_gM14JGy.PNG
+        new file:   media/post/car_pBDHz1u.PNG
+        modified:   templates/blog/create_blog_post.html
+
+        Note:
+
+        1. Blog post created.
+        2. Tag created.
+        3. Can add >1 tag.
+        4. But tag is not active by default.
+        5. If changed image, old image does not remove.
+
+        :)?
