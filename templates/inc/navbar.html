@@ -30,7 +30,7 @@
                             <li><a class="dropdown-item" href="">My posts</a></li>
                             <li><a class="dropdown-item" href="">Edit profile</a></li>
                             <li><a class="dropdown-item" href="">Favs</a></li>
-                            <li><a class="dropdown-item" href="">Log out</a></li>
+                            <li><a class="dropdown-item" href="{% url 'account:logout_view' %}">Log out</a></li>
                         </ul>
                     </li>
                     {% else %}

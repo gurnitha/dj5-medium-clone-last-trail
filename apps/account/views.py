@@ -3,7 +3,7 @@
 # Django modules
 from django.shortcuts import render, redirect
 from django.contrib import messages
-from django.contrib.auth import authenticate, login
+from django.contrib.auth import authenticate, login, logout
 
 # Create your views here.
 
@@ -41,3 +41,11 @@ def login_view(request):
 
     return render(request, 'account/login.html', context)
 # ///////////////////////// login_view /////////////////////////
+
+
+# ///////////////////////// logout_view /////////////////////////
+def logout_view(request):
+    messages.info(request, f'{request.user.username } Logged out successfully')
+    logout(request)
+    return redirect('blog:home_view')
+# ///////////////////////// logout_view /////////////////////////
