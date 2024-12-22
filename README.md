@@ -84,3 +84,15 @@
         modified:   templates/blog/index.html
 
 ## 2. USER MANAGEMENT
+
+#### 1. Create account app and register it to the project
+
+        modified:   README.md
+        new file:   apps/account/__init__.py
+        new file:   apps/account/admin.py
+        new file:   apps/account/apps.py
+        new file:   apps/account/migrations/__init__.py
+        new file:   apps/account/models.py
+        new file:   apps/account/tests.py
+        new file:   apps/account/views.py
+        modified:   config/settings.py
