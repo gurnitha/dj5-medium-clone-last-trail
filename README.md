@@ -96,3 +96,13 @@
         new file:   apps/account/tests.py
         new file:   apps/account/views.py
         modified:   config/settings.py
+
+#### 2. Login - part 1: Create views, urls, templates
+
+        modified:   README.md
+        new file:   apps/account/urls.py
+        modified:   apps/account/views.py
+        modified:   config/urls.py
+        new file:   templates/account/login.html
+        new file:   templates/blog/account/login.html
+        modified:   templates/inc/navbar.html
