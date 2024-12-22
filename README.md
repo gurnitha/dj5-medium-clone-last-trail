@@ -159,3 +159,23 @@
         modified:   apps/account/views.py
         new file:   templates/account/register.html
         modified:   templates/inc/navbar.html
+
+#### 9. Register - part 3: Add logic to register_view 
+
+        modified:   README.md
+        modified:   apps/account/views.py
+
+        Note:
+
+        1. Successfully register new user.
+        2. User profile also created automatically.
+        3. But no avatar.
+
+        :)
+
+#### 10. Register - part 4: Create path for media files
+
+        modified:   README.md
+        modified:   apps/account/views.py
+        modified:   config/settings.py
+        modified:   config/urls.py
