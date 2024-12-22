@@ -221,3 +221,13 @@
         modified:   apps/blog/forms.py
         modified:   config/settings.py
         modified:   templates/blog/create_blog_post.html
+
+#### 7. CREATE blog post - part 7: Modified BlogPostModelForm and use TinyMCE widget for form content
+
+        modified:   apps/blog/forms.py
+        modified:   templates/blog/create_blog_post.html
+
+        Note:
+
+        1. TinyMCE does not work in Edge browser.
+        1. It works in Chome and Mozzilla
