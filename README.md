@@ -126,3 +126,8 @@
         modified:   README.md
         modified:   templates/base.html
         new file:   templates/inc/messages.html
+
+#### 5. Login - part 4: Add conditional to navbar to show/hide menus
+
+        modified:   README.md
+        modified:   templates/inc/navbar.html

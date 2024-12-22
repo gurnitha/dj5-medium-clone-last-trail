@@ -20,24 +20,20 @@
                     </li>
 
                     <!-- Dropdown -->
+                    {% if user.is_authenticated %}
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
                             aria-expanded="false">
-                        admin
+                            {{ user.username}}
                         </a>
                         <ul class="dropdown-menu">
-                            <li><a class="dropdown-item" href="">Show My All Posts</a></li>
-                            <li><a class="dropdown-item" href="">Edit Profile</a></li>
+                            <li><a class="dropdown-item" href="">My posts</a></li>
+                            <li><a class="dropdown-item" href="">Edit profile</a></li>
                             <li><a class="dropdown-item" href="">Favs</a></li>
+                            <li><a class="dropdown-item" href="">Log out</a></li>
                         </ul>
                     </li>
-                    <li class="nav-item">
-                        <a class="nav-link btn btn-dark text-light px-3 rounded-pill ms-3"
-                            href="/user/logout/">
-                        Logout
-                        </a>
-                    </li>
-
+                    {% else %}
                     <li class="nav-item">
                         <a class="nav-link" href="{% url 'account:login_view' %}">
                             Sign In
@@ -49,6 +45,7 @@
                             Get Started
                         </a>
                     </li>
+                    {% endif %}
                 </ul>
             </div>
         </div>
