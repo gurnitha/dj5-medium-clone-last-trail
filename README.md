@@ -179,3 +179,7 @@
         modified:   apps/account/views.py
         modified:   config/settings.py
         modified:   config/urls.py
+
+## 3. BLOG POSTS MANAGEMENT
+
+
