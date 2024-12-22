@@ -34,6 +34,15 @@ class Category(CommonModel):
     #         }
     #     )
 
+    def get_absolute_url_by_category(self):
+        return reverse(
+            'blog:posts_by_category_view',
+            kwargs={
+                "category_slug": self.slug
+            }
+        )
+
+
 
 class Tag(CommonModel):
     def __str__(self):
@@ -46,6 +55,7 @@ class Tag(CommonModel):
     #             "tag_slug": self.slug
     #         }
     #     )
+
 
 
 class BlogPost(CommonModel):

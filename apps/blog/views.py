@@ -87,3 +87,14 @@ def post_detail_view(request, user_slug, post_slug):
     return render(request, 'blog/post_detail.html', context)
 # ///////////////////////// post_detail_view /////////////////////////
 
+
+# ///////////////////////// posts_by_category_view /////////////////////////
+def posts_by_category_view(request, category_slug):
+    category = get_object_or_404(Category, slug=category_slug)
+    posts_by_category   = BlogPost.objects.filter(category=category, is_active=True)
+    context = dict(
+        category=category,
+        posts_by_category=posts_by_category,
+    )
+    return render(request, 'blog/posts_by_category.html', context)
+# ///////////////////////// posts_by_category_view /////////////////////////

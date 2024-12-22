@@ -35,7 +35,7 @@
                                 </svg>
                             </li>
                             <li class="list-inline-item fs-12">
-                                <a href="/blog/category/cat1/">
+                                <a href="{{ post.category.get_absolute_url_by_category }}">
                                 <span class="badge bg-secondary">
                                 {{ post.category }}
                                 </span>
@@ -67,7 +67,11 @@
                 <!-- Categories -->
                 <ul class="list-inline mb-3">
                     {% for category in categories %}
-                        <li class="list-inline-item border p-2 text-muted fs-12 mb-1 rounded">{{ category.title }}</li>
+                        <li class="list-inline-item border p-2 text-muted fs-12 mb-1 rounded">
+                            <a href="{{ category.get_absolute_url_by_category }}">
+                            {{ category.title }}
+                            </a>
+                        </li>
                     {% endfor %}
                 </ul>
                 <!-- Categories end -->
