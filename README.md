@@ -106,3 +106,17 @@
         new file:   templates/account/login.html
         new file:   templates/blog/account/login.html
         modified:   templates/inc/navbar.html
+
+#### 3. Login - part 2: Add logic to login_view and log the user in
+
+        modified:   README.md
+        modified:   apps/account/views.py
+        modified:   templates/account/login.html
+
+        Note:
+
+        1. User successfully logged in.
+
+        But no message to inform the user.
+
+        :)?
