@@ -372,7 +372,6 @@
 
         :)
 
-
 #### 18. EDIT profile - part 3: Define get_all_posts_url and get_profile_edit_url and modified navbar
 
         modified:   apps/account/models.py
@@ -381,3 +380,14 @@
         Note: Links works.
 
         :)
+
+#### 19. TRENDING POSTS - Show all trending posts
+
+        modified:   README.md
+        modified:   apps/blog/views.py
+        new file:   media/avatar/darling2_m2yCYDN.PNG.30x30_q85_crop.png
+        new file:   media/avatar/ing.jpeg.30x30_q85_crop.jpg
+        modified:   templates/blog/components/posts_trend.html
+        new file:   templates/blog/components/posts_trend_component.html
+
+        :) :) :)

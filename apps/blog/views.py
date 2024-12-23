@@ -19,10 +19,12 @@ from account.models import Profile
 def home_view(request):
     # posts_latest = BlogPost.objects.filter(is_active=True).order_by('-created_at')
     posts_latest = BlogPost.objects.filter(is_active=True) #.order_by('-created_at')
+    posts_trend = posts_latest.order_by('-view_count')[:6]
     tags = Tag.objects.filter(is_active=True)
     categories = Category.objects.filter(is_active=True)
     context = dict(
         posts_latest=posts_latest,
+        posts_trend=posts_trend,
         categories=categories,
         tags=tags,
     )
