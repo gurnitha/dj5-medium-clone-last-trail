@@ -353,3 +353,8 @@
         modified:   templates/blog/components/posts_latest.html
 
         :)
+
+#### 16. EDIT profile - part 1: Create ProfileModelForm
+
+        modified:   README.md
+        new file:   apps/account/forms.py
