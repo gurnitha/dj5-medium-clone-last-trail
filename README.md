@@ -429,3 +429,24 @@
         2. To check my fav posts: click dropdown navbar + cliv menu Favs
 
         :)
+
+#### 21. UPDATE Blog Post - Update a blog post 
+
+        modified:   README.md
+        modified:   apps/blog/models.py
+        modified:   apps/blog/urls.py
+        modified:   apps/blog/views.py
+        new file:   media/post/banner02_nZjpk0S.jpg
+        new file:   media/post/banner02_nZjpk0S.jpg.1000x300_q85_crop.jpg
+        new file:   media/post/banner02_nZjpk0S.jpg.400x300_q85_crop.jpg
+        modified:   templates/blog/components/posts_latest.html
+        modified:   templates/blog/post_detail.html
+        new file:   templates/blog/update_blog_post.html
+
+        Note:
+
+        1. Update works.
+        2. But there are a lot of tags come up when update a post...? 
+           I don't know about JS ..(:
+
+        :)? 

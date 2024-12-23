@@ -69,6 +69,45 @@ def create_blog_post_view(request):
 # ///////////////////////// create_blog_post_view /////////////////////////
 
 
+# ///////////////////////// post_edit_view /////////////////////////
+def post_edit_view(request, post_slug):
+
+    post = get_object_or_404(BlogPost, slug=post_slug)
+
+    # If unknown user
+    if not post.user == request.user:
+        messages.warning(request, 'You cannot edit this post information')
+        return redirect('blog:home_view')
+
+    # Click post title to edit
+    title = post.title
+    form = BlogPostModelForm(instance=post)
+
+    # Handling POST request
+    if request.method == 'POST':
+        form = BlogPostModelForm(request.POST or None, request.FILES or None, instance=post)
+
+        if form.is_valid():
+            f = form.save(commit=False)
+            f.save()
+            tags = json.loads(form.cleaned_data.get('tag'))
+            for item in tags:
+                tag_item, created = Tag.objects.get_or_create(title=item.get('value').lower())
+                tag_item.is_active = True
+                tag_item.save()
+                f.tag.add(tag_item)
+
+            messages.success(request, "Your blog post has been edited successfully..")
+            return redirect('blog:home_view')
+            
+    context = dict(
+        title=title,
+        form=form,
+    )
+    return render(request, 'blog/update_blog_post.html', context)
+# ///////////////////////// post_edit_view /////////////////////////
+
+
 # ///////////////////////// posts_by_user_view /////////////////////////
 def posts_by_user_view(request, user_slug):
     profile         = get_object_or_404(Profile, slug=user_slug)

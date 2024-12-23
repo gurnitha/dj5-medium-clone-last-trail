@@ -93,7 +93,7 @@
                 <ul class="list-inline mt-3">
                     {% for tag in tags %}
                     <li class="list-inline-item">
-                        <a href="{{ tag.get_absolute_url_by_tag }}" class="text-muted fs-14">{{ tag.title }}</a>
+                        <a href="{{ tag.get_absolute_url_by_tag }}" >{{ tag.title }}</a>
                     </li>
                     {% endfor %}
                 </ul>
