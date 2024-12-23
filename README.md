@@ -345,3 +345,11 @@
         new file:   templates/blog/posts_by_tag.html
 
         :)
+
+#### 15. VIEWED-COUNT blog posts - part 1: Counting the viewed blog post 
+
+        modified:   README.md
+        modified:   apps/blog/views.py
+        modified:   templates/blog/components/posts_latest.html
+
+        :)
