@@ -3,13 +3,14 @@
 # Django modules
 from django.shortcuts import render, redirect, get_object_or_404
 from django.contrib import messages
+from django.http import JsonResponse
 
 # Third party
 import json
 
 # My modules
 from blog.forms import BlogPostModelForm
-from blog.models import Tag, BlogPost, Category 
+from blog.models import Tag, BlogPost, Category, UserPostFav
 from account.models import Profile
 
 # Create your views here.
@@ -114,3 +115,19 @@ def posts_by_tag_view(request, tag_slug):
     )
     return render(request, 'blog/posts_by_tag.html', context)
 # ///////////////////////// posts_by_tag_view /////////////////////////
+
+
+# ///////////////////////// fav_update_view /////////////////////////
+def fav_update_view(request):
+    if request.method == 'POST':
+        post = get_object_or_404(BlogPost, slug=request.POST.get('slug'))
+        if post:
+            post_fav, created = UserPostFav.objects.get_or_create(
+                user=request.user,
+                post=post,
+            )
+            if not created:
+                post_fav.is_deleted = not post_fav.is_deleted
+                post_fav.save()
+    return JsonResponse({"status": "OK"})
+# ///////////////////////// fav_update_view /////////////////////////

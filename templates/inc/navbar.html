@@ -34,7 +34,8 @@
                             <li><a class="dropdown-item" href="{{ request.user.profile.get_all_posts_url }}">My posts</a></li>
                             <li><a class="dropdown-item" href="{{ request.user.profile.get_profile_edit_url }}">Edit profile</a></li>
 
-                            <li><a class="dropdown-item" href="">Favs</a></li>
+                            <li><a class="dropdown-item" href="{{ request.user.profile.get_fav_url }}">Favs</a></li>
+                            
                             <li><a class="dropdown-item" href="{% url 'account:logout_view' %}">Log out</a></li>
                         </ul>
                     </li>

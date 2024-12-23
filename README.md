@@ -391,3 +391,41 @@
         new file:   templates/blog/components/posts_trend_component.html
 
         :) :) :)
+
+#### 20. FAV POSTS - Add fav posts and show all fav posts
+
+        modified:   README.md
+
+        # Step 1: Create UserPostFav model, run migration, and register to admin
+        modified:   apps/blog/models.py
+        new file:   apps/blog/migrations/0003_userpostfav.py
+        modified:   apps/blog/admin.py
+
+        # Step 2: Create fav_update, include it in index.html, add block script to base template, and static file
+        new file:   templates/inc/fav_update.html
+        modified:   templates/blog/index.html
+        modified:   templates/base.html
+        new file:   static/js/axios.min.js
+
+        # Step 3: Create views, urls, templates, link
+        modified:   apps/blog/urls.py
+        modified:   apps/blog/views.py
+        new file:   templates/blog/posts_fav.html
+        new file:   templates/blog/components/posts_fav_component.html
+        modified:   templates/inc/navbar.html
+
+        # Step 4: Create user_fav_view, url, get_fav_url
+        modified:   apps/account/models.py
+        modified:   apps/account/urls.py
+        modified:   apps/account/views.py
+        
+        # Step 5: if user.is_authenticated load post.slug
+        modified:   templates/blog/components/posts_latest.html
+
+
+        Note: IT WORKS AT LAST!
+
+        1. To add fav post: logged in + click the icon.
+        2. To check my fav posts: click dropdown navbar + cliv menu Favs
+
+        :)
