@@ -332,5 +332,16 @@
         modified:   templates/blog/post_detail.html
         new file:   templates/blog/posts_by_category.html
         modified:   templates/blog/posts_by_user.html
-        
+
+        :)
+
+#### 14. READ blog posts by tag - part 6: Show all posts by a tag
+
+        modified:   README.md
+        modified:   apps/blog/models.py
+        modified:   apps/blog/urls.py
+        modified:   apps/blog/views.py
+        modified:   templates/blog/components/posts_latest.html
+        new file:   templates/blog/posts_by_tag.html
+
         :)

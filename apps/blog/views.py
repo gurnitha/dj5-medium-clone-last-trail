@@ -98,3 +98,15 @@ def posts_by_category_view(request, category_slug):
     )
     return render(request, 'blog/posts_by_category.html', context)
 # ///////////////////////// posts_by_category_view /////////////////////////
+
+
+# ///////////////////////// posts_by_tag_view /////////////////////////
+def posts_by_tag_view(request, tag_slug):
+    tag = get_object_or_404(Tag, slug=tag_slug)
+    posts_by_tag = BlogPost.objects.filter(tag=tag)
+    context = dict(
+        tag=tag,
+        posts_by_tag=posts_by_tag
+    )
+    return render(request, 'blog/posts_by_tag.html', context)
+# ///////////////////////// posts_by_tag_view /////////////////////////

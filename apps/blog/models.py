@@ -48,13 +48,13 @@ class Tag(CommonModel):
     def __str__(self):
         return self.title
 
-    # def get_absolute_url(self):
-    #     return reverse(
-    #         'blog:tag_view',
-    #         kwargs={
-    #             "tag_slug": self.slug
-    #         }
-    #     )
+    def get_absolute_url_by_tag(self):
+        return reverse(
+            'blog:posts_by_tag_view',
+            kwargs={
+                "tag_slug": self.slug
+            }
+        )
 
 
 

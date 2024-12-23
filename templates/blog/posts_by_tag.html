@@ -1,11 +1,18 @@
+{% extends 'base.html' %}
 {% load static %}
 {% load thumbnail %}
-    <section class="container mt-5">
-        <div class="row">
 
-            <!-- Main: Posts latest -->
-            <main class="col-sm-7">
-                {% for post in posts_latest %}
+{% block content %}
+<div class="container">
+    <div class="row">
+
+        <div class="col-sm-8 offset-sm-2 mt-5 bg-light border p-5">
+            <h1>{{ tag.title }}</h1>
+        </div>
+
+        <div class="col-sm-8 offset-sm-2 mt-5">
+            {% for post in posts_by_tag %}
+
                 <article class="row mb-3">
                     <div class="col-sm-8">
                         <div>
@@ -14,8 +21,8 @@
                                 <small class="ms-2"></small>
                             </a>
                             <a href="{{ post.user.profile.get_absolute_url }}" class="text-decoration-none text-muted">
-                            <img src="" class="rounded-circle" alt="">
-                            <small class="ms-2">{{ post.user.username }}</small>
+                                <img src="" class="rounded-circle" alt="">
+                                <small class="ms-2">{{ post.user.username }}</small>
                             </a>
                         </div>
                          <h3 class="mt-2 mb-1">
@@ -35,7 +42,7 @@
                                 </svg>
                             </li>
                             <li class="list-inline-item fs-12">
-                                <a href="{{ post.category.get_absolute_url_by_category }}">
+                                <a href="{{ post.category.get_absolute_url_by_category}}">
                                 <span class="badge bg-secondary">
                                 {{ post.category }}
                                 </span>
@@ -57,35 +64,10 @@
                         <img src="{{ post.cover_image|thumbnail_url:'thumbnail' }}" alt="" class="w-100 img-thumbnail">
                     </div>
                 </article>
-                {% endfor %}
-            </main>
-            <!-- Main: Posts latest -->
 
-            <aside class="col-sm-4 offset-sm-1">
-                <h6 class="my-3">DISCOVER MORE OF WHAT MATTERS TO YOU</h6>
-
-                <!-- Categories -->
-                <ul class="list-inline mb-3">
-                    {% for category in categories %}
-                        <li class="list-inline-item border p-2 text-muted fs-12 mb-1 rounded">
-                            <a href="{{ category.get_absolute_url_by_category }}">
-                            {{ category.title }}
-                            </a>
-                        </li>
-                    {% endfor %}
-                </ul>
-                <!-- Categories end -->
-                <hr>
-
-                <!-- Tags -->
-                <ul class="list-inline mt-3">
-                    {% for tag in tags %}
-                    <li class="list-inline-item">
-                        <a href="{{ tag.get_absolute_url_by_tag }}" class="text-muted fs-14">{{ tag.title }}</a>
-                    </li>
-                    {% endfor %}
-                </ul>
-                <!-- Tags end -->
-            </aside>
+            {% endfor %}
         </div>
-    </section>
+
+    </div>
+</div>
+{% endblock content %}
