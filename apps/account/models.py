@@ -24,10 +24,15 @@ class Profile(models.Model):
     def __str__(self):
     	return self.user.username
 
-    def get_absolute_url(self):
+    def get_all_posts_url(self):
         return reverse(
             'blog:posts_by_user_view',
             kwargs={
                 "user_slug": self.slug,
             }
+        )
+
+    def get_profile_edit_url(self):
+        return reverse(
+            'account:profile_edit_view'
         )

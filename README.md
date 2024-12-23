@@ -371,3 +371,13 @@
         modified:   templates/inc/navbar.html
 
         :)
+
+
+#### 18. EDIT profile - part 3: Define get_all_posts_url and get_profile_edit_url and modified navbar
+
+        modified:   apps/account/models.py
+        modified:   templates/inc/navbar.html
+
+        Note: Links works.
+
+        :)

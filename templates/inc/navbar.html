@@ -27,8 +27,13 @@
                             {{ user.username}}
                         </a>
                         <ul class="dropdown-menu">
+                            <!-- Kedua link ini bekerja, tapi dicoba dengan kedua yang di bawahnya.
                             <li><a class="dropdown-item" href="{% url 'blog:posts_by_user_view' user %}">My posts</a></li>
                             <li><a class="dropdown-item" href="{% url 'account:profile_edit_view' %}">Edit profile</a></li>
+                            -->
+                            <li><a class="dropdown-item" href="{{ request.user.profile.get_all_posts_url }}">My posts</a></li>
+                            <li><a class="dropdown-item" href="{{ request.user.profile.get_profile_edit_url }}">Edit profile</a></li>
+
                             <li><a class="dropdown-item" href="">Favs</a></li>
                             <li><a class="dropdown-item" href="{% url 'account:logout_view' %}">Log out</a></li>
                         </ul>
