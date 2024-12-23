@@ -358,3 +358,16 @@
 
         modified:   README.md
         new file:   apps/account/forms.py
+
+#### 17. EDIT profile - part 2: Create views, urls, templates and logic
+
+        new file:   apps/account/migrations/0002_profile_info.py
+        modified:   apps/account/models.py
+        modified:   apps/account/urls.py
+        modified:   apps/account/views.py
+        new file:   apps/blog/migrations/0002_alter_blogpost_options_alter_category_options_and_more.py
+        new file:   media/avatar/darling2_m2yCYDN.PNG
+        new file:   templates/account/profile_edit.html
+        modified:   templates/inc/navbar.html
+
+        :)

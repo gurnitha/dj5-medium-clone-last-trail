@@ -6,6 +6,9 @@ from django.contrib.auth.models import User
 from autoslug import AutoSlugField
 from django.urls import reverse
 
+# Third party modules
+from tinymce import models as tinymce_models
+
 # Create your models here.
 
 class Profile(models.Model):
@@ -13,6 +16,7 @@ class Profile(models.Model):
     avatar = models.ImageField(upload_to='avatar')
     instagram = models.CharField(max_length=200)
     slug = models.SlugField(max_length=200)
+    info = tinymce_models.HTMLField(blank=True, null=True)
 
     class Meta:
     	verbose_name_plural = 'Profiles'

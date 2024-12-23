@@ -11,6 +11,7 @@ from slugify import slugify
 
 # My modules
 from account.models import Profile
+from account.forms import ProfileModelForm
 
 # Create your views here.
 
@@ -125,3 +126,38 @@ def register_view(request):
 
     return render(request, 'account/register.html', context)
 # ///////////////////////// register_view /////////////////////////
+
+
+# ///////////////////////// profile_edit_view /////////////////////////
+def profile_edit_view(request):
+    user = request.user
+    initial_data = dict(
+        first_name = user.first_name,
+        last_name = user.last_name,
+    )
+    form = ProfileModelForm(instance=user.profile, initial=initial_data)
+
+    if request.method == "POST":
+        form = ProfileModelForm(
+            request.POST or None,
+            request.FILES or None,
+            instance=user.profile
+        )
+        if form.is_valid():
+            f = form.save(commit=False)
+            user.first_name = form.cleaned_data.get('first_name')
+            user.last_name = form.cleaned_data.get('last_name')
+            user.save()
+            f.save()
+            messages.success(request, 'Profile updated successfully..')
+            return redirect('account:profile_edit_view')
+        
+
+    title = "Profile update :"
+    context = dict(
+        form=form,
+        title=title,
+    )
+
+    return render(request, 'account/profile_edit.html', context)
+# ///////////////////////// profile_edit_view /////////////////////////
